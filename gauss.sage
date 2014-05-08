@@ -9,6 +9,16 @@ class GaussianRational:
         return GaussianRational(self.x+right.x, self.y+right.y)
     def __sub__(self, right):
         return GaussianRational(self.x-right.x, self.y-right.y)
-    def __crazy__(self, crazy):
-        return 'I'm crazy'
+    def norm(self):
+        """ 
+        This method returns the norm of the given GaussianRational number.
+        
+        
+        Example: 
+            sage: r = GaussianRational(2/3, 1/3)
+            sage: r.norm()
+            
+            Will return 5/9
+        """
+        return self.x**2 + self.y**2
 
